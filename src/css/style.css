@@ -1,0 +1,354 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "painel painel painel painel"
+                         "sobre sobre sobre sobre"
+                         "serviços serviços serviços serviços"
+                         "clientes clientes clientes clientes"
+                         "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.6rem;
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: 400;
+}
+
+/* HEADER */
+
+.header{
+    grid-area: header;
+    background-color: #ffffff;
+}
+
+.header .header-container{
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+    
+}
+
+.header .header-container .logo{
+    background:url('../images/L0G0\ 1\ -9.png') center center no-repeat;
+    width: 292px;
+    height: 92px;
+}
+
+.header .header-container .logo h1{
+    font-size: 0;
+}
+
+.header a:hover{
+    color: #4000D3;
+}
+
+@media (max-width: 425px){
+    .header .header-container {
+        padding: 10px 20px;
+    }
+    .header .header-container .logo{
+        background: url('../images/logo\ responsivo.png') center center no-repeat;
+    }
+}
+
+/* PAINEL */
+
+.painel{
+    grid-area: painel;
+    height: 89vh;
+    background: url('../images/painel.webp') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.painel h2{
+    font-weight: 400;
+    font-size: 4rem;
+    color: #ffffff;
+    font-family: 'Myriad Pro';
+    padding:10px 30%;
+    text-align: center;
+    
+}
+
+.painel p{
+    font-family: 'Myriad Pro';
+    font-weight: 100;
+    font-size: 2rem;
+    color: #ffffff;
+    padding:10px 30%;
+    line-height: 30px;
+    text-align: center;
+    
+
+}
+
+.painel a{
+    color: #ffffff;
+    background-color: #4000D3;
+    border-radius: 50px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.painel a:hover{
+    color: #000;
+    background-color: #00ffff;
+}
+
+.painel:after {
+    content: url('../images/seta_preta.png');
+    height: 35px;
+    bottom: 40px;
+    position: absolute;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes downarrow {
+    0% { -webkit-transform: translateY(0); 
+    opacity: 0.4;}
+    100% { -webkit-transform: translateY(0.4em); 
+    opacity: 0.9;}
+}
+
+@media (max-width: 425px){
+    .painel{
+        height: 60vh;
+    }
+    .painel h2{
+        font-size: 2.5rem;
+    }
+
+    .painel p{
+        font-size: 1.5rem;
+    }
+
+
+}
+
+/* SOBRE */
+
+.sobre{
+    grid-area: sobre;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ffffff; 
+    max-width: var(--max-width-size);
+    margin: 0 auto;
+}
+
+.sobre .imagem{
+    background: url('../images/sobre.webp') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.sobre .item{
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00ffff;
+
+}
+
+.sobre .item h3{
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.sobre .item p {
+    font-size: 1.8rem;
+    margin: 30px 0;
+}
+
+.sobre .item a {
+    font-size: 1.6rem;
+    align-self: flex-start;
+    padding: 15px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.sobre .item a:hover {
+    color:#ffffff;
+    background-color: #4000D3;
+}
+
+@media (max-width: 425px){
+    .sobre .item {
+        text-align: center;
+    }
+
+    .sobre{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+}
+
+/* SERVIÇOS */
+
+.serviços{
+    grid-area: serviços;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+    margin-top: 5px;
+
+}
+
+.serviços .serviço{
+    padding: 70px 20px;
+}
+
+.serviços .serviço img{
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.serviços .serviço h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.serviços .serviço p{
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 400px;
+    margin: 20px auto 0;
+    line-height: 25px;
+}
+
+.serviços .serviço:nth-child(1){
+    background-color: #4000D3;
+}
+
+.serviços .serviço:nth-child(2){
+    background-color: #4000D3;
+}
+
+@media (max-width: 425px){
+    .serviços{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CLIENTES */
+
+.clientes{
+    background-color: #ffffff;
+    grid-area: clientes;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.clientes img{
+    width: 200px;
+    height: 200px;
+    transition: 0.3s;
+}
+
+.clientes a:hover img{
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .clientes{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 425px) {
+    .clientes{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (4,1fr);
+    }
+}
+
+/* FOOTER */
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    background-color: #000;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.footer h4{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #4000D3;
+}
+
+.footer .endereço {
+    padding: 15px;
+    margin-top: 20px;
+}
+.footer .endereço a {
+    color: #4000D3;
+    line-height: 30px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer .endereço a:hover{
+    color: #ffffff;
+}
+
+.footer nav{
+    margin: 50px 0;
+}
+
+.footer nav ul{
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.footer nav ul li a {
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 20px;
+    transition: 0.3s;
+    color: #4000D3;
+}
+
+.footer nav ul li a:hover{
+    font-weight: 700;
+    color: #ffffff
+    ;
+}
+
+.footer .redes-sociais i{
+    font-size: 2rem;
+    transition: 0.3s;
+    color: #4000D3;
+}
+
+.footer .redes-sociais a {
+    margin: 20px;
+}
+
+.footer .redes-sociais a:hover{
+    color: #ffffff;
+}
+
+
