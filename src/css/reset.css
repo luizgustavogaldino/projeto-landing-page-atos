@@ -2,6 +2,20 @@
     font-family: 'Myriad Pro';
     src: url('../myriad-pro-cufonfonts/MYRIADPRO-REGULAR.OTF');
 }
+@font-face {
+    font-family: 'Myriad Pro Semi';
+    src: url('../myriad-pro-cufonfonts/MYRIADPRO-SEMIBOLD.OTF');
+}
+@font-face {
+    font-family: 'Myriad Pro Bold';
+    src: url('../myriad-pro-cufonfonts/MYRIADPRO-BOLD.OTF');
+}
+@font-face {
+    font-family: 'Myriad Pro Light';
+    src: url('../myriad-pro-cufonfonts/MyriadPro-Light.otf');
+}
+
+
 
 *{
     margin: 0;
